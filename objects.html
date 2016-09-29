@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/nibagefime/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+// JavaScript Object
+
+var superhero =  {
+  heroName: "Batman",
+  secretIdentity: "Bruce Wayne",
+  age: 30,
+  archVillan:"The Joker",
+  batmobile:function(){
+  return this.archVillan +"drives the batmobile and m"
+  }
+}
+
+// Call a property
+console.log(superhero.secretIdentity);
+// Call a method
+console.log(superhero.batmobile());
+
+superhero.heroName = "superman";
+
+//Calling a property
+console.log(superhero.HeroName);
+
+//adding a propert
+superhero.faveFood ="Tacos";
+console.log(superhero.faveFood);
+
+//deleting a object property
+console.log(superhero.heroName)
+delete superhero.archvillan;
+console.log(superhero.archVillan);
+
+
+
+
+</script>
+</body>
+</html>
