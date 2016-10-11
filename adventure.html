@@ -1,0 +1,61 @@
+</DOCTYPE HTML>
+<html>
+   <head>
+       <title></title>
+   </head>
+   <body>
+       <script>
+
+       function game(){
+           function death(){
+               alert("You died noob");
+           }
+           function Bridge(){
+               alert("What is your favourite colour");
+               var mountain = prompt("asdasdasdasdasda");
+               alert("after travelling you reach a mountain Eat Cheese or Climb mountain ");
+               if(mountain == "Eat" || mountain == "Eat Cheese"){
+               alert("you begin to eat the cheese from the mountain you die");
+               death();
+           }
+           else if (mountain == "Climb"){
+               alert("You climb to the top of cheese mountain! you deservera medal!");
+       }
+           else{
+               alert("i dont know what you are you talking about !!");
+               Bridge("");
+           }
+           function path(){
+           }
+    
+           var path1 = prompt("You approach the bridge of death, which path will you take ? Bridge, Path");
+
+           if(path1 == "Bridge"){
+               bridge()
+           }
+           else if (path1 =="Other"){
+
+           }
+           else{
+               alert("what are you talking about! "+player);
+               game()
+           }
+       }
+       function endGame(){
+       alert("goodbye");
+       }
+       }
+
+       alert("Adventure Time of!");
+       var player = prompt("What is your name?");
+       var gameStart = confirm(player+" are you ready for an adventure");
+
+       if(gameStart){
+        game();
+       }
+       else{
+        endgame();
+       }
+       </script>
+   </body>
+</html>
