@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/saqiqizape/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+var key = 0
+
+var inventory = {
+  keys: 0,
+  coins: 0,
+  apples: 0,
+  magic_cloak:"yes please"
+}
+   alert("You see a key on the ground");
+    var choice = prompt("what will you do? (pick up key or move on)");
+
+if (choice =="pick up key"){
+  inventory.keys = 1;
+  console.log("Keys = "+inventory.keys);
+}
+else if(choice=="check"){
+  checkInv();
+}
+</script>
+</body>
+</html>
