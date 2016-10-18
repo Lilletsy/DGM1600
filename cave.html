@@ -1,0 +1,127 @@
+<html>
+	<head>
+        <title>Choose Your Own Adventure Game</title>
+	</head>
+	<body>
+        <script>
+            /* JavaScript : Choose Your Own Adventure Game */
+            /* Game Functions*/
+            
+            /* Game Win */
+            function win(score){
+                alert("Congratulations you have won the game!");
+                 alert("Score = "+score );
+            }
+            
+            /* Game Over*/
+            function gameOver(score){
+                alert("Thank you for playing CYOA 2.0, Goodbye!");
+                alert("Score = "+score );
+            }
+            
+            /* Starting Location Village */
+            function village(){
+                
+                var path =prompt("You arrive at RiverGlen a small rustic village on the outskirts of the forest Fwelt. The village is bursting with life, all sorts of people are out and about. The village offers many services. What will you choose? (Blacksmith, Inn, Tavern, Magicshop or Leave)").toLowerCase();
+                
+               /* Switch statement checking village variable */ 
+                switch(path){
+                    case "blacksmith":
+                        alert("The blacksmith's cold dark eyes stare at you coldly underneath his bushy unkept brows. You decide not to talk with the blacksmith and move on.");
+                        village();
+                    break;
+                    case "inn":
+                        alert("The inn is a nice place. You stop for some food and to listen to the music.As the night ceeeps on you rent a room and go to bed. In the morning you wake refreshed and renued. You pick up your belongings and check out.");
+                        village();
+                    break;
+                    case "tavern":
+                        alert("Tavern is closed for repairs. Must of been some bar fight!");
+                        village();
+                    break;
+                    case "magicshop":
+                        alert("The magic shop is full of wonderous things and creepythings too like dried lizard tongue and picked rats, Ew! Some wizard give you the stink eye and you decide to move along");
+                        village();
+                    break;
+                    case "leave":
+                        forest();
+                    break;
+                    default:
+                        alert("I dont know what "+path+" means!?");
+                        village();
+                }
+                
+                
+                
+            }
+            
+            /* Forest Fwelt */
+            function forest(){
+                var path = prompt("You enter the forest. You see a castle to the west and a cave to the south. What will you do (Castle or Cave)").toLowerCase();
+                
+                if(path=="castle"){
+                    castle();
+                }
+                else if(path=="cave"){
+                    darkcave();
+                }
+                else{
+                    alert("I dont understand "+path+" ?!");
+                    forest();
+                }
+            }
+            
+            function darkcave(){
+                var cave = new Array();
+				cave[0]="There is a Dragon in this cave!"+"<br>";
+				cave[1]="You found a chest of treasure!"+"<br>";
+				cave[2]="Except for a few cobwebs and some rocks the cave is pretty much empty!"+"<br>";
+				cave[3]="The cave is pitch black and the stench of death hangs in the air"+"<br>";
+				var randomCave = cave[Math.floor(Math.random() * cave.length)];
+				
+                document.write(randomCave);
+				
+                if(randomCave=="There is a Dragon in this cave!"+"<br>")
+				{
+					dragon();
+				}
+				else if(randomCave=="You found a chest of treasure!"+"<br>")
+				{
+					alert(randomCave);
+                    score=+ 100;
+					forest();
+				}
+				else
+                    alert(randomCave);
+					forest();
+            
+            }
+            /* Dragon function is tied to cave function */    
+            function dragon ()
+			{
+				alert("You enter the cave it is dark and smells of dead things. Suddenly you hear a roar .... you've woken a DRAGON! Before you could turn and run you feel a blast of intense heat engulf you!");
+				document.write('<h1 style="color:red">Game Over</h1>');
+				death();
+			}
+            function castle(){
+                
+            }
+            
+            /* Global Variables */
+            var score = 0;
+            
+            /* Pop Up Boxes */
+            alert("Choose Your Own Adventure Game 2.0");            
+            var player = prompt("What is your name night?");
+            var gameStart = confirm(player+" are you ready to begin your adventure?");
+            
+            /* If Statement checking gameStart  variable */
+            if(gameStart){
+                village();
+            }
+            else{
+                gameOver(score);
+            }
+            
+        </script>
+	</body>
+</html>
