@@ -6,11 +6,11 @@ public class Destroy : MonoBehaviour {
 	public GameObject explosion;
 
 	void OnCollisionEnter(Collision collision){
-		if(collision.gameObject.name == "Terrain"){
-			Instantiate(explosion,transform.position,transform.rotation);
-			Destroy (gameObject);
-		}
-	}
+		if(collision.gameObject.name == "Terrain" || collision.gameObject.tag =="Destructable"){
+Instantiate(explosion,transform.position,transform.rotation);
+Destroy (gameObject);
+}
+}
 	
 	// Update is called once per frame
 	void Update () {

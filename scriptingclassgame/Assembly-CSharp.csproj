@@ -64,6 +64,8 @@
      <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_DemoPlaySound.cs" />
      <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_OpenOtherScene.cs" />
      <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo Basic (CSharp)\Scripts\GUIAnimatorFREEDemo.cs" />
+     <Compile Include="Assets\Pick Up.cs" />
+     <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\Rotator.cs" />
      <Compile Include="Assets\Water Flow FREE\Scripts\WaterFlowFREEDemo.cs" />
      <Compile Include="Assets\follow.cs" />
